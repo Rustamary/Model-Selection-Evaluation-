@@ -1,0 +1,92 @@
+{
+  "cv_folds": 5,
+  "test_size": 0.2,
+  "results": {
+    "Logistic Regression": {
+      "holdout": {
+        "accuracy": 0.73,
+        "precision": 0.697,
+        "recall": 0.575,
+        "f1_score": 0.6301,
+        "confusion_matrix": [
+          [
+            100,
+            20
+          ],
+          [
+            34,
+            46
+          ]
+        ]
+      },
+      "cross_validation": {
+        "cv_accuracy_mean": 0.725,
+        "cv_precision_mean": 0.6844,
+        "cv_recall_mean": 0.5775,
+        "cv_f1_mean": 0.6254,
+        "cv_accuracy_std": 0.0226,
+        "cv_precision_std": 0.0222,
+        "cv_recall_std": 0.0599,
+        "cv_f1_std": 0.0429
+      }
+    },
+    "Decision Tree": {
+      "holdout": {
+        "accuracy": 0.66,
+        "precision": 0.5938,
+        "recall": 0.475,
+        "f1_score": 0.5278,
+        "confusion_matrix": [
+          [
+            94,
+            26
+          ],
+          [
+            42,
+            38
+          ]
+        ]
+      },
+      "cross_validation": {
+        "cv_accuracy_mean": 0.664,
+        "cv_precision_mean": 0.5912,
+        "cv_recall_mean": 0.5475,
+        "cv_f1_mean": 0.5642,
+        "cv_accuracy_std": 0.0302,
+        "cv_precision_std": 0.0542,
+        "cv_recall_std": 0.0735,
+        "cv_f1_std": 0.0413
+      }
+    },
+    "Random Forest": {
+      "holdout": {
+        "accuracy": 0.71,
+        "precision": 0.6719,
+        "recall": 0.5375,
+        "f1_score": 0.5972,
+        "confusion_matrix": [
+          [
+            99,
+            21
+          ],
+          [
+            37,
+            43
+          ]
+        ]
+      },
+      "cross_validation": {
+        "cv_accuracy_mean": 0.725,
+        "cv_precision_mean": 0.68,
+        "cv_recall_mean": 0.595,
+        "cv_f1_mean": 0.6334,
+        "cv_accuracy_std": 0.0141,
+        "cv_precision_std": 0.0292,
+        "cv_recall_std": 0.0384,
+        "cv_f1_std": 0.0209
+      }
+    }
+  },
+  "best_model": "Random Forest",
+  "selection_criterion": "highest mean cross-validated F1-score (balances precision/recall, robust to the class imbalance in churn vs. no-churn)"
+}
